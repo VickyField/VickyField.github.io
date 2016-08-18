@@ -442,7 +442,7 @@
 			
 			dvc.data;
 			
-			var numFormat = d3.format(".2f");
+			var numFormat = d3.format(".1f");
 	
 			function drawGraphic()
 			{
@@ -1019,7 +1019,7 @@
 			{
 				
 				// open and load configuration file. 					
-				d3.json("config_all.json", function(error, json)
+				d3.json("config_female.json", function(error, json)
 				{					
 					// strore read in json data from config file as as global dvc. variable ...	
 					dvc = json;
@@ -1036,7 +1036,7 @@
 											
 						queue()
 							.defer(d3.json, "geography.json")
-							.defer(d3.csv, "data_all.csv")
+							.defer(d3.csv, "data_female.csv")
 							.await(ready);						
 					})						
 				})

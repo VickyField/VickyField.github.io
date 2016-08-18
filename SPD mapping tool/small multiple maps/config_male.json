@@ -1,6 +1,6 @@
 {
 	"essential": {
-		"graphic_data_url": "data_all.csv",
+		"graphic_data_url": "data_male.csv",
 
 		"fieldsToIgnore": ["AREACD", "AREANM"],
 
@@ -25,12 +25,12 @@
 		"yAxisBreak_sm_md_lg": [65, 65, 65],
 		"numRows_sm_md_lg": [25, 20, 12],
 		"numColumns_sm_md_lg": [1, 2, 2],
-		"breakDivisions":4 ,
+		"breakDivisions": 4,
 		"breaks" : [
-            [-0.22,-0.03,0.0,0.038,0.08],
-            [-0.22,-0.03,0.0,0.038,0.08],
-            [-0.22,-0.03,0.0,0.038,0.08],
-            [-0.22,-0.03,0.0,0.038,0.08]
+            [-22,-3,0,3.8,8],
+            [-22,-3,0,3.8,8],
+            [-22,-3,0,3.8,8],
+            [-22,-3,0,3.8,8]
             ]
 	},
 	"optional": {
