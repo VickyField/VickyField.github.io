@@ -78,16 +78,16 @@
 			
 		}
 		
-		.nav-pills > li.active > #Male,
-		.nav-pills > li.active > #Male:hover,
-		.nav-pills > li.active > #Male:focus {
+		.nav-pills > li.active > #male,
+		.nav-pills > li.active > #male:hover,
+		.nav-pills > li.active > #male:focus {
 			border-bottom: 5px solid rgb(40, 176, 188);
 			
 		}
 
-		.nav-pills > li.active > #Female,
-		.nav-pills > li.active > #Female:hover,
-		.nav-pills > li.active > #Female:focus {
+		.nav-pills > li.active > #female,
+		.nav-pills > li.active > #female:hover,
+		.nav-pills > li.active > #female:focus {
 			border-bottom: 5px solid rgb(40, 176, 188);
 			
 		}	
@@ -112,13 +112,13 @@
 			border-bottom: 5px solid rgb(34, 122, 128);
 		}
 		
-		.navbar-inverse > li > #Male:hover,
-		.navbar-inverse > li > #Male:focus {
+		.navbar-inverse > li > #male:hover,
+		.navbar-inverse > li > #male:focus {
 			border-bottom: 5px solid rgb(34, 122, 128);
 		}
 		
-		.navbar-inverse > li > #Female:hover,
-		.navbar-inverse > li > #Female:focus {
+		.navbar-inverse > li > #female:hover,
+		.navbar-inverse > li > #female:focus {
 			border-bottom: 5px solid rgb(34, 122, 128);
 		}
 		
@@ -328,10 +328,10 @@
                                     <a onClick="loadIframe(this.id);" href="#" id="all" data-toggle="pill" >All people</a>
                                 </li>
                                 <li>
-                                    <a onClick="loadIframe(this.id);" href="#" id="Male" data-toggle="pill" >Males</a>
+                                    <a onClick="loadIframe(this.id);" href="#" id="male" data-toggle="pill" >Males</a>
                                 </li>
                                 <li>
-                                    <a onClick="loadIframe(this.id);" href="#" id="Female" data-toggle="pill" >Females</a>
+                                    <a onClick="loadIframe(this.id);" href="#" id="female" data-toggle="pill" >Females</a>
                                 </li>
                                <!-- <li>
                                     <a onClick="loadIframe(this.id);" href="#" id="economy" data-toggle="pill" >Economy & skills</a>
@@ -354,10 +354,10 @@
                                     <a onClick="loadIframe(this.id);" href="#" id="all">All</a>
                                 </li>
                                 <li>
-                                    <a onClick="loadIframe(this.id);" href="#" id="Male">Males</a>
+                                    <a onClick="loadIframe(this.id);" href="#" id="male">Males</a>
                                 </li>
                                 <li>
-                                    <a onClick="loadIframe(this.id);" href="#" id="Female">Female</a>
+                                    <a onClick="loadIframe(this.id);" href="#" id="female">Female</a>
                                 </li>
                                 <!--<li>
                                     <a onClick="loadIframe(this.id);" href="#" id="economy">Economy and skills</a>
@@ -483,10 +483,10 @@ function loadIframe(data){
 		title.append("tspan").text(function(){
 								if(data == "all"){
 									return "all"; 
-								} else if (data == "Male"){
-									return "Male";
-								} else if (data == "Female"){
-									return "Female"
+								} else if (data == "male"){
+									return "male";
+								} else if (data == "female"){
+									return "female"
 								} //else {
 //									return "economy"
 //								}
@@ -497,10 +497,10 @@ function loadIframe(data){
 	
 	if (data == "all"){
 		var ddText = "all";
-	} else if (data == "Male"){
-		var ddText = "Male";
-	} else if (data == "Female"){
-		var ddText = "Female";
+	} else if (data == "male"){
+		var ddText = "male";
+	} else if (data == "female"){
+		var ddText = "female";
 	} //else {
 //		var ddText = "Economy ";
 //	}
