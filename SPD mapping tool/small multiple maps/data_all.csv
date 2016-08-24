@@ -1,4 +1,4 @@
-AREACD,AREANM, diff of SPDv1 to Census 2011, diff of SPDv2 to Census 2011, diff of SPDv1 to OE 2015, diff of SPDv2 to OE 2015
+AREACD,AREANM,% difference: SPDv1 to Census 2011,% difference: SPDv2 to Census 2011,% difference: SPDv1 to OE 2015,% difference:SPDv2 to OE 2015
 E06000001,Hartlepool,0.8803873,1.0690665,1.341642,1.7913246
 E06000002,Middlesbrough,3.5754423,3.6794268,4.3541242,4.8590343
 E06000003,Redcar and Cleveland,2.372828,2.2272306,2.3133267,2.4688268
