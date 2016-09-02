@@ -102,24 +102,24 @@
 		.nav-pills > li.active > #all,
 		.nav-pills > li.active > #all:hover,
 		.nav-pills > li.active > #all:focus {
-			border-bottom: 5px solid  #rgb(128, 125, 186);
+			border-bottom: 5px solid  rgb(40, 176, 188);
 			
 		}
 		
 		/*nav bar styling when hoving over*/
 		.navbar-inverse > li > #all:hover,
 		.navbar-inverse > li > #all:focus {
-			border-bottom: 5px solid rgb(34, 122, 128);
+			border-bottom: 5px solid rgb(40, 176, 188);
 		}
 		
 		.navbar-inverse > li > #male:hover,
 		.navbar-inverse > li > #male:focus {
-			border-bottom: 5px solid rgb(34, 122, 128);
+			border-bottom: 5px solid rgb(40, 176, 188);
 		}
 		
 		.navbar-inverse > li > #female:hover,
 		.navbar-inverse > li > #female:focus {
-			border-bottom: 5px solid rgb(34, 122, 128);
+			border-bottom: 5px solid rgb(40, 176, 188);
 		}
 		
 		/*.navbar-inverse > li > #economy:hover,
@@ -128,7 +128,7 @@
 		}*/
 		.navbar-inverse > li > #all:hover,
 		.navbar-inverse > li > #all:focus {
-			border-bottom: 5px solid #54278f;
+			border-bottom: 5px solid rgb(40, 176, 188);
 		}
 		
 
@@ -290,34 +290,11 @@
                                       		<p class="lead" id="subtitle">How do the Statistcal Population Datasets compare to the Official Statistics?</p> 
                                             <p>**Dummy data - need final** Donec imperdiet vehicula mauris, id varius eros pulvinar quis. Aenean suscipit sem nec nisi aliquet malesuada. Vestibulum nec lorem porta, varius mi sit amet, cursus ipsum. Vivamus magna nibh, cursus vitae ex non, hendrerit hendrerit sapien. Fusce pellentesque tincidunt dapibus. Aenean ac leo a sem tincidunt rhoncus. Integer luctus leo vitae mi suscipit faucibus. Duis euismod gravida orci, non efficitur ante fermentum vitae. Nullam sit amet facilisis ipsum, et hendrerit eros. Etiam ullamcorper ut nibh eget viverra. Curabitur a tortor massa. Sed sed nisi eu arcu dapibus fermentum a eu tellus. For information about the Foresight Future of an Ageing Populationproject, <a href="https://www.gov.uk/government/collections/future-of-ageing" target="_blank">please click here.</a></p>
 
-<p>Donec imperdiet vehicula mauris, id varius eros pulvinar quis. Aenean suscipit sem nec nisi aliquet malesuada. Vestibulum nec lorem porta, varius mi sit amet, cursus ipsum. Vivamus magna nibh, cursus vitae ex non, hendrerit hendrerit sapien. For the full data tables, <a href="Future_of_an_ageing_all_data.xlsx" target-"_blank" >please click here</a> or use the metadata below. Include information about the breaks.</p> 
+<p>Donec imperdiet vehicula mauris, id varius eros pulvinar quis. Aenean suscipit sem nec nisi aliquet malesuada. Vestibulum nec lorem porta, varius mi sit amet, cursus ipsum. Vivamus magna nibh, cursus vitae ex non, hendrerit hendrerit sapien. For the full data tables, <a href="Future_of_an_ageing_all_data.xlsx" target-"_blank" >please click here</a>.</p> 
                                       </div>  
                                       
     
                                 </div>
-                               <!-- <div class="row">
-                                      <div class="col-xs-2 col-sm-2"> 
-                                            <button type="button" id="collapse" class="coll showHideBtn">
-                                              <span class="glyphicon glyphicon-upload" aria-hidden="true"></span> Less information
-                                            </button>
-                    
-                                            <button type="button" id="expand" class="coll showHideBtn">
-                                              <span class="glyphicon glyphicon-upload" aria-hidden="true"></span> More information
-                                            </button>  
-                                       </div>         
-                                </div>
-                                <div id="intro" class=" row">
-                                      <div class="col-sm-12">
-                                      	<p>These interactive maps choose breaks in the data to minimize the variance within classes and maximize the variance between classes – known as the <a href="https://en.wikipedia.org/wiki/Jenks_natural_breaks_optimization" target="_blank"> Jenks natural classification method</a>. In this method, the breaks in the data vary depending on how it is spread. As the examples below show, if data is evenly spread its breaks are more evenly sized than if there is an outlier.</p>
-                                      </div>
-                                      <div class="col-sm-6">
-                                      	<img class="dist" src="distribution.png">
-                                      </div>
-                                      <div class="col-sm-6">
-                                      	<img class="dist" src="distribution2.png">
-                                      </div>
-                                      
-                                </div>-->
                           </div>
                    
                    
@@ -333,12 +310,6 @@
                                 <li>
                                     <a onClick="loadIframe(this.id);" href="#" id="female" data-toggle="pill" >Females</a>
                                 </li>
-                               <!-- <li>
-                                    <a onClick="loadIframe(this.id);" href="#" id="economy" data-toggle="pill" >Economy & skills</a>
-                                </li>
-                                 <li>
-                                    <a onClick="loadIframe(this.id);" href="#" id="all" data-toggle="pill" >Choose your own...</a>
-                                </li>-->
                             </ul>
                          </div>
                       </div>
@@ -359,22 +330,132 @@
                                 <li>
                                     <a onClick="loadIframe(this.id);" href="#" id="female">Female</a>
                                 </li>
-                                <!--<li>
-                                    <a onClick="loadIframe(this.id);" href="#" id="economy">Economy and skills</a>
+                                </ul>
+                          </div>
+                      </div>
+                      
+                      <div id="navigation" class="row">
+                        <div class="col-sm-12 hidden-xs">
+                            <ul class="nav navbar nav-pills navbar-inverse nav-justified">
+                                <li class="active">
+                                    <a onClick="loadIframe(this.id);" href="#" id="all" data-toggle="pill" >All ages</a>
                                 </li>
                                 <li>
-                                    <a onClick="loadIframe(this.id);" href="#" id="all">Chosse your own...</a>
-                                </li>-->
-                              </ul>
+                                    <a onClick="loadIframe(this.id);" href="#" id="all" data-toggle="pill" >Age 0-14</a>
+                                </li>
+                                <li>
+                                    <a onClick="loadIframe(this.id);" href="#" id="male" data-toggle="pill" >Age 0-14</a>
+                                </li>
+                                <li>
+                                    <a onClick="loadIframe(this.id);" href="#" id="female" data-toggle="pill" >Age 25-49</a>
+                                </li>
+                                <li>
+                                    <a onClick="loadIframe(this.id);" href="#" id="female" data-toggle="pill" >Age 50-64</a>
+                                </li>
+                                <li>
+                                    <a onClick="loadIframe(this.id);" href="#" id="female" data-toggle="pill" >Age 65+</a>
+                                </li>
+                            </ul>
+                         </div>
+                      </div>
+                      
+                      <div class="col-xs-12 visible-xs">
+                          <div id="menu" role="group" class="btn-group btn-group col-xs-12">
+                            
+                              <button id="varsel" aria-expanded="true" data-toggle="dropdown" type="button" class="btn btn-primary dropdown-toggle btn-block">
+                                    all <span class="caret"></span>
+                              </button>      
+                              <ul class="dropdown-menu" role="menu">
+                                <li class="active">
+                                    <a onClick="loadIframe(this.id);" href="#" id="all">All ages</a>
+                                </li>
+                                <li>
+                                    <a onClick="loadIframe(this.id);" href="#" id="male">Age 0-14</a>
+                                </li>
+                                <li>
+                                    <a onClick="loadIframe(this.id);" href="#" id="male">Age 0-14</a>
+                                </li>
+                                <li>
+                                    <a onClick="loadIframe(this.id);" href="#" id="female">Age 25-49</a>
+                                </li>
+                                <li>
+                                    <a onClick="loadIframe(this.id);" href="#" id="female">Age 50-64</a>
+                                </li>
+                                <li>
+                                    <a onClick="loadIframe(this.id);" href="#" id="female">Age 65+</a>
+                                </li>
+                                </ul>
                           </div>
                       </div>
                  </div><!--end of .bs-docs-section-->
                 
+				<div>
                     <div class="row" >
                         <div class="col-sm-12" >
                             <div id="iframeDiv"></div>
                         </div>
                     </div>
+                    
+               </div>
+               <div>
+                     <div class="page-header">
+                                <div class="row">
+                                      <div class="col col-xs-12  col-sm-12">
+                                      		<p class="lead" id="subtitle">How does this compare by age?</p> 
+                                            <p>Donec imperdiet vehicula mauris, id varius eros pulvinar quis. Aenean suscipit sem nec nisi aliquet malesuada. Vestibulum nec lorem porta, varius mi sit amet, cursus ipsum. Vivamus magna nibh, cursus vitae ex non, hendrerit hendrerit sapien. Fusce pellentesque tincidunt dapibus. Aenean ac leo a sem tincidunt rhoncus. Integer luctus leo vitae mi suscipit faucibus. Duis euismod gravida orci, non efficitur ante fermentum vitae. Nullam sit amet facilisis ipsum, et hendrerit eros. Etiam ullamcorper ut nibh eget viverra. Curabitur a tortor massa. Sed sed nisi eu arcu dapibus fermentum a eu tellus. For information about the Foresight Future of an Ageing Populationproject, <a href="https://www.gov.uk/government/collections/future-of-ageing" target="_blank">please click here.</a></p>
+
+<p>Donec imperdiet vehicula mauris, id varius eros pulvinar quis. Aenean suscipit sem nec nisi aliquet malesuada. Vestibulum nec lorem porta, varius mi sit amet, cursus ipsum. Vivamus magna nibh, cursus vitae ex non, hendrerit hendrerit sapien. For the full data tables, <a href="Future_of_an_ageing_all_data.xlsx" target-"_blank" >please click here</a>.</p> 
+                                      </div>     
+                                </div>
+                          </div>
+                    
+                  
+                  <div id="navigation" class="row">
+                        <div class="col-sm-12 hidden-xs">
+                            <ul class="nav navbar nav-pills navbar-inverse nav-justified">
+                                <li class="active">
+                                    <a onClick="loadIframe(this.id);" href="#" id="all" data-toggle="pill" >All people</a>
+                                </li>
+                                <li>
+                                    <a onClick="loadIframe(this.id);" href="#" id="male" data-toggle="pill" >Males</a>
+                                </li>
+                                <li>
+                                    <a onClick="loadIframe(this.id);" href="#" id="female" data-toggle="pill" >Females</a>
+                                </li>
+                            </ul>
+                         </div>
+                      </div>
+                      
+                      <div class="col-xs-12 visible-xs">
+                          <div id="menu" role="group" class="btn-group btn-group col-xs-12">
+                            
+                              <button id="varsel" aria-expanded="true" data-toggle="dropdown" type="button" class="btn btn-primary dropdown-toggle btn-block">
+                                    all <span class="caret"></span>
+                              </button>      
+                              <ul class="dropdown-menu" role="menu">
+                                <li class="active">
+                                    <a onClick="loadIframe(this.id);" href="#" id="all">All</a>
+                                </li>
+                                <li>
+                                    <a onClick="loadIframe(this.id);" href="#" id="male">Males</a>
+                                </li>
+                                <li>
+                                    <a onClick="loadIframe(this.id);" href="#" id="female">Female</a>
+                                </li>
+                                </ul>
+                          </div>
+                      </div>
+                  </div>    
+                  <div>
+                    <div class="row" >
+                        <div class="col-sm-12" >
+                            <div id="iframeDiv"></div>
+                        </div>
+                    </div>
+                    
+               </div>
+                  
+                    
                 </div> <!--end of container-->
             </div> <!--@end content -->
 
@@ -487,9 +568,7 @@ function loadIframe(data){
 									return "male";
 								} else if (data == "female"){
 									return "female"
-								} //else {
-//									return "economy"
-//								}
+								} 
 						})
 					
 
@@ -501,9 +580,7 @@ function loadIframe(data){
 		var ddText = "male";
 	} else if (data == "female"){
 		var ddText = "female";
-	} //else {
-//		var ddText = "Economy ";
-//	}
+	} 
 	
 	d3.select(".dropdown-menu").select("#"+data).attr("class","active")
 	
