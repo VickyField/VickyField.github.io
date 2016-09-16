@@ -414,7 +414,8 @@ if (graphic.width() < dvc.threshold_sm) {
 			dvc.yScale=d3.scale.ordinal()
 				.domain(dvc.settings.yDimension.index)
 				.rangeBands([dvc.panelHeight,0],0);
-	
+				
+
 		    //create svg for chart
 		    var svg = d3.select('#graphic').append('svg')
 		    			.attr("id","vizCanvas")
