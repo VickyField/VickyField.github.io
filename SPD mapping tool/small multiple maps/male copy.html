@@ -369,14 +369,15 @@
                 <p>Percentage difference between:</p>
                  </div> 
             </div>
+
             
             <div class="row">
-                 <div id="mults" class="col-lg-8 col-sm-8 col-xs-12">
+                 <div id="mults" class="col-sm-8 col-xs-12">
                    <div id="graphic">
                         <!--<img src="fallback.png" alt="[Chart]" />-->
                    </div> 
                 </div>
-                <div class="col-lg-4 col-sm-4 col-xs-12" id="details">
+                <div class="col-sm-4 col-xs-12" id="details">
                 </div> 
             </div>
                 
@@ -428,11 +429,11 @@
 				var innerPadding_values = {
 										"sm":[ 20 , 20 , 30 , 25 ],
 										"md":[ 40 , 20 , 30 , 25 ],
-										"lg":[ 40 , 25 , 20 , 45 ]
+										"lg":[ 40 , 25 , 45 , 45 ]
 										/* top , right , bottom , left */
 									}
 									
-				var mapScales = [ 10000 , 8000 , 11000 ];
+				var mapScales = [ 5000 , 6000 , 6000 ];
 			
 				//set variables for chart dimensions dependent on width of #graphic
 				if (graphic.width() < threshold_sm) {
@@ -617,7 +618,7 @@
 									return "#cdcdcd"
 								} else {
 									
-									return "#cdcdcd";
+									return "none";
 								}
 							})
 							.on("mouseout",unhighlight)
@@ -739,8 +740,8 @@
 				
 				xScale = d3.scale.linear()
 					.domain([breaks[0], breaks[dvc.essential.breakDivisions]]) /*range for data*/
-					.range([0, key_svg-30]); /*range for pixels - do not change!*/ 
-					//.range([0, key_svg*0.75-innerPadding.bottom-innerPadding.top]);
+					.range([0, key_svg-30 ]); /*range for pixels*/
+					
 				
 				d3.select("#variable_"+i)
 					.transition()
@@ -790,7 +791,7 @@
 						}
 						
 					}).text(function(){
-						var fmt = d3.format(".1r")
+						var fmt = d3.format(".2r")
 						if(linevalues[0][vals[i]]==".."||[vals[i]]=="undefined"){
 							return "";
 						} else {
@@ -895,7 +896,6 @@
 		d3.event.preventDefault();
 		clearInterval(intervalID);
 		intervalID = undefined;
-		
 	})
 
 	}
@@ -994,7 +994,7 @@
 			{
 				
 				// open and load configuration file. 					
-				d3.json("config_female.json", function(error, json)
+				d3.json("config_male.json", function(error, json)
 				{					
 					// strore read in json data from config file as as global dvc. variable ...	
 					dvc = json;
@@ -1011,7 +1011,7 @@
 											
 						queue()
 							.defer(d3.json, "geography.json")
-							.defer(d3.csv, "data_female.csv")
+							.defer(d3.csv, "data_male.csv")
 							.await(ready);						
 					})						
 				})
@@ -1129,8 +1129,7 @@
 				x = d3.scale.linear()
 					.domain([breaks[0], breaks[dvc.essential.breakDivisions]]) /*range for data*/
 					.range([0, key_svg-30 ]); /*range for pixels*/
-					
-					
+		
 				var yAxis = d3.svg.axis()
 					.scale(y)
 					.orient("left")
@@ -1178,9 +1177,8 @@
 					.style("stroke","none")
 					.style("opacity",0.8);
 			
-							
 				var g = svgkey.append("g")
-					.attr("transform", "translate(32,25)");	
+					.attr("transform", "translate(32,25)");
 					
 				var g2 = details.append("g")
 					.attr("transform", "translate(10,20)");

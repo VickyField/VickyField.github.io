@@ -994,7 +994,7 @@
 			{
 				
 				// open and load configuration file. 					
-				d3.json("config_female.json", function(error, json)
+				d3.json("config_all copy.json", function(error, json)
 				{					
 					// strore read in json data from config file as as global dvc. variable ...	
 					dvc = json;
@@ -1011,7 +1011,7 @@
 											
 						queue()
 							.defer(d3.json, "geography.json")
-							.defer(d3.csv, "data_female.csv")
+							.defer(d3.csv, "data_all.csv")
 							.await(ready);						
 					})						
 				})

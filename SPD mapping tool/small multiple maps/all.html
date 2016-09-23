@@ -513,7 +513,7 @@
 
 			
 				var projection = d3.geo.albers()
-					.center([2.7, 53.1])
+					.center([2.5, 53.1])
 					.rotate([3.2, 1])
 					.parallels([50, 60])
 					.scale(mapScale)
@@ -617,7 +617,7 @@
 									return "#cdcdcd"
 								} else {
 									
-									return "none";
+									return "#cdcdcd";
 								}
 							})
 							.on("mouseout",unhighlight)
@@ -739,7 +739,7 @@
 				
 				xScale = d3.scale.linear()
 					.domain([breaks[0], breaks[dvc.essential.breakDivisions]]) /*range for data*/
-					.range([0, key_svg]); /*range for pixels*/
+					.range([0, key_svg-30]); /*range for pixels - do not change!*/ 
 					//.range([0, key_svg*0.75-innerPadding.bottom-innerPadding.top]);
 				
 				d3.select("#variable_"+i)
