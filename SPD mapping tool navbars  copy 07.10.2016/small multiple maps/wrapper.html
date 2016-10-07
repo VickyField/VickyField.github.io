@@ -1,0 +1,612 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>How do the Statistcal Population Datasets compare to the Official Statistics?</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../lib/styles.css" media="screen">
+    <link rel="stylesheet" href="../lib/style-chosen.css">
+
+    <style>
+		
+		
+		@font-face {
+			font-family: 'open_sanslight';		
+			src: url('assets/OpenSans-Light-webfont.woff') format('woff');
+			font-weight: normal;
+			font-style: normal;
+		
+		}
+		
+		@font-face {
+			font-family: 'open_sansitalic';		
+			src: url('assets/OpenSans-Italic-webfont.woff') format('woff');
+			font-weight: normal;
+			font-style: normal;
+		
+		}
+		
+		@font-face {
+			font-family: 'open_sansregular';		
+			src: url('assets/OpenSans-Regular-webfont.woff') format('woff');
+			font-weight: normal;
+			font-style: normal;
+		
+		}
+		
+		@font-face {
+			font-family: 'open_sanssemibold';		
+			src: url('assets/OpenSans-Semibold-webfont.woff') format('woff');
+			font-weight: normal;
+			font-style: normal;
+		
+		}
+		
+		#container {
+			position:absolute;
+			width:100%;
+		}
+		
+		#navigation {
+			background-color:#fff;	
+		}
+		
+		.footnote{
+			padding-top:10px;
+			padding-bottom:10px;
+     		font-family: 'open_sansregular';
+			font-size:11px;
+			line-height:1.3;
+		}
+		
+		.navbar {
+			border-bottom: 5px solid #fff;
+			
+			
+		}
+		
+		#menu{
+			z-index:6;	
+		}
+		
+		 /*nav bar styling when chosen category*/
+		.nav-pills > li.active > #all,
+		.nav-pills > li.active > #all:hover,
+		.nav-pills > li.active > #all:focus {
+			border-bottom: 5px solid #029dd1;
+			
+		}
+		
+		.nav-pills > li.active > #male,
+		.nav-pills > li.active > #male:hover,
+		.nav-pills > li.active > #male:focus {
+			border-bottom: 5px solid #029dd1;
+			
+		}
+
+		.nav-pills > li.active > #female,
+		.nav-pills > li.active > #female:hover,
+		.nav-pills > li.active > #female:focus {
+			border-bottom: 5px solid #029dd1;
+			
+		}	
+		
+		/*.nav-pills > li.active > #economy,
+		.nav-pills > li.active > #economy:hover,
+		.nav-pills > li.active > #economy:focus {
+			border-bottom: 5px solid rgb(40, 176, 188);
+			
+		}*/
+		
+		.nav-pills > li.active > #all,
+		.nav-pills > li.active > #all:hover,
+		.nav-pills > li.active > #all:focus {
+			border-bottom: 5px solid  #029dd1;
+			
+		}
+		
+		/*nav bar styling when hoving over*/
+		.navbar-inverse > li > #all:hover,
+		.navbar-inverse > li > #all:focus {
+			border-bottom: 5px solid #029dd1;
+		}
+		
+		.navbar-inverse > li > #male:hover,
+		.navbar-inverse > li > #male:focus {
+			border-bottom: 5px solid #029dd1;
+		}
+		
+		.navbar-inverse > li > #female:hover,
+		.navbar-inverse > li > #female:focus {
+			border-bottom: 5px solid #029dd1;
+		}
+		
+		.navbar-inverse > li > #all:hover,
+		.navbar-inverse > li > #all:focus {
+			border-bottom: 5px solid #029dd1;
+		}
+		
+
+	
+	.btn-ons {
+	  color: #6f6f6f;
+	  background-color: #ffffff;
+	  border-color: #D3D3D3;
+	}
+	
+	.btn-ons:hover,
+	.btn-ons:focus,
+	.btn-ons.focus,
+	.btn-ons:active,
+	.btn-ons.active,
+	.open > .dropdown-toggle.btn-ons {
+	  color: #6f6f6f;
+	  background-color: #E7E7E7;
+	  border-color: #D3D3D3;
+	}
+	
+	#social{
+	top:5px;
+}
+
+.social {
+			padding-top:5px;
+			padding-left:5px;
+			float:right;
+			opacity:0.5;
+			cursor:pointer;
+		}
+		
+		.social:hover {
+			opacity:1;
+				
+		}
+		
+		
+		.social {
+			
+		}
+		
+		#embedrow {
+			padding-bottom:5px;
+			margin:5px;
+			border-bottom:1px solid #d3d3d3;
+			border-top:1px solid #d3d3d3;
+		}
+		
+		
+		#close {
+			padding-bottom:3px;	
+		}
+		
+		#allDivs{
+			margin:auto;	
+		}
+
+#ieMsg{
+	width: 940px;
+    margin: 0 auto;
+}
+#suptext {
+	padding:20px 20px 20px 20px;
+	width:900px;
+	background-color:white;
+}
+
+#suptext p{
+	margin:0px 20px 10px 20px;
+	font-family: Helvetica, Arial, sans-serif;
+    font-size:14px;
+	color:#227a80;
+
+}
+
+#suptext a{
+	font-family: Helvetica, Arial, sans-serif;
+    font-size:14px;
+	color:#051CC3;
+
+}
+
+#suptext h1{
+	margin:0px;
+	font-family: Helvetica, Arial, sans-serif;
+    font-size:24px;
+	color:#227a80;
+}
+
+#thumbNail{
+	top:0px;
+	left:0px;
+}
+
+
+.source{
+	 text-align:right;	
+}
+
+@media (max-width: 700px){
+	.source{
+	 text-align:left;	
+	}
+
+	#chartTitle{
+	 font-size:24px;	
+	}
+
+}
+
+
+.showHideBtn {
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+			width: 160px;
+			border: none;
+			padding: 6px 0;
+			background-color: #227a80;
+			font: 700 14px Arial;
+			color: #FFF;
+			filter: inherit;
+			-webkit-appearance: button;
+			cursor: pointer;
+		}	
+		
+	#intro{
+			display:none;
+		}	
+		
+	.dist{
+		width:100%;
+	}
+	</style>
+    
+    
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../bower_components/html5shiv/dist/html5shiv.js"></script>
+      <script src="../bower_components/respond/dest/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+  <body>
+           
+  <div id="allDivs">
+    <div id="main-wrapper"> 
+            <div id="content" style="display:none"> 
+                <div class="container">
+                <div class="bs-docs-section">
+                   
+                   
+                   
+                   
+<!--                   <div class="page-header">
+                                <div class="row">
+                                      <div class="col col-xs-12  col-sm-12">
+                                      		<p class="lead" id="subtitle">How do the Statistcal Population Datasets compare to the Official Statistics?</p> 
+                                            <p>**Dummy data - need final** Donec imperdiet vehicula mauris, id varius eros pulvinar quis. Aenean suscipit sem nec nisi aliquet malesuada. Vestibulum nec lorem porta, varius mi sit amet, cursus ipsum. Vivamus magna nibh, cursus vitae ex non, hendrerit hendrerit sapien. Fusce pellentesque tincidunt dapibus. Aenean ac leo a sem tincidunt rhoncus. Integer luctus leo vitae mi suscipit faucibus. Duis euismod gravida orci, non efficitur ante fermentum vitae. Nullam sit amet facilisis ipsum, et hendrerit eros. Etiam ullamcorper ut nibh eget viverra. Curabitur a tortor massa. Sed sed nisi eu arcu dapibus fermentum a eu tellus. For information about the Foresight Future of an Ageing Populationproject, <a href="https://www.gov.uk/government/collections/future-of-ageing" target="_blank">please click here.</a></p>
+
+<p>Donec imperdiet vehicula mauris, id varius eros pulvinar quis. Aenean suscipit sem nec nisi aliquet malesuada. Vestibulum nec lorem porta, varius mi sit amet, cursus ipsum. Vivamus magna nibh, cursus vitae ex non, hendrerit hendrerit sapien. For the full data tables, <a href="Future_of_an_ageing_all_data.xlsx" target-"_blank" >please click here</a>.</p> 
+                                      </div>  
+                                      
+    
+                                </div>
+                          </div>
+-->                   
+                   
+                   <div id="navigation" class="row">
+                        <div class="col-sm-12 hidden-xs">
+                            <ul class="nav navbar nav-pills navbar-inverse nav-justified">
+                                <li class="active">
+                                    <a onClick="loadIframe(this.id);" href="#" id="all" data-toggle="pill" >All people</a>
+                                </li>
+                                <li>
+                                    <a onClick="loadIframe(this.id);" href="#" id="male" data-toggle="pill" >Males</a>
+                                </li>
+                                <li>
+                                    <a onClick="loadIframe(this.id);" href="#" id="female" data-toggle="pill" >Females</a>
+                                </li>
+                            </ul>
+                         </div>
+                      </div>
+                      
+                      <div class="col-xs-12 visible-xs">
+                          <div id="menu" role="group" class="btn-group btn-group col-xs-12">
+                            
+                              <button id="varsel" aria-expanded="true" data-toggle="dropdown" type="button" class="btn btn-primary dropdown-toggle btn-block">
+                                    all <span class="caret"></span>
+                              </button>      
+                              <ul class="dropdown-menu" role="menu">
+                                <li class="active">
+                                    <a onClick="loadIframe(this.id);" href="#" id="all">All</a>
+                                </li>
+                                <li>
+                                    <a onClick="loadIframe(this.id);" href="#" id="male">Male</a>
+                                </li>
+                                <li>
+                                    <a onClick="loadIframe(this.id);" href="#" id="female">Female</a>
+                                </li>
+                                </ul>
+                          </div>
+                      </div>
+                      
+<!--                      <div id="navigation" class="row">
+                        <div class="col-sm-12 hidden-xs">
+                            <ul class="nav navbar nav-pills navbar-inverse nav-justified">
+                                <li class="active">
+                                    <a onClick="loadIframe(this.id);" href="#" id="all" data-toggle="pill" >All ages</a>
+                                </li>
+                                <li>
+                                    <a onClick="loadIframe(this.id);" href="#" id="all" data-toggle="pill" >Age 0-14</a>
+                                </li>
+                                <li>
+                                    <a onClick="loadIframe(this.id);" href="#" id="male" data-toggle="pill" >Age 0-14</a>
+                                </li>
+                                <li>
+                                    <a onClick="loadIframe(this.id);" href="#" id="female" data-toggle="pill" >Age 25-49</a>
+                                </li>
+                                <li>
+                                    <a onClick="loadIframe(this.id);" href="#" id="female" data-toggle="pill" >Age 50-64</a>
+                                </li>
+                                <li>
+                                    <a onClick="loadIframe(this.id);" href="#" id="female" data-toggle="pill" >Age 65+</a>
+                                </li>
+                            </ul>
+                         </div>
+                      </div>
+-->                      
+<!--                      <div class="col-xs-12 visible-xs">
+                          <div id="menu" role="group" class="btn-group btn-group col-xs-12">
+                            
+                              <button id="varsel" aria-expanded="true" data-toggle="dropdown" type="button" class="btn btn-primary dropdown-toggle btn-block">
+                                    all <span class="caret"></span>
+                              </button>      
+                              <ul class="dropdown-menu" role="menu">
+                                <li class="active">
+                                    <a onClick="loadIframe(this.id);" href="#" id="all">All ages</a>
+                                </li>
+                                <li>
+                                    <a onClick="loadIframe(this.id);" href="#" id="male">Age 0-14</a>
+                                </li>
+                                <li>
+                                    <a onClick="loadIframe(this.id);" href="#" id="male">Age 0-14</a>
+                                </li>
+                                <li>
+                                    <a onClick="loadIframe(this.id);" href="#" id="female">Age 25-49</a>
+                                </li>
+                                <li>
+                                    <a onClick="loadIframe(this.id);" href="#" id="female">Age 50-64</a>
+                                </li>
+                                <li>
+                                    <a onClick="loadIframe(this.id);" href="#" id="female">Age 65+</a>
+                                </li>
+                                </ul>
+                          </div>
+                      </div>
+                 
+-->                
+				<div>
+                    <div class="row" >
+                        <div class="col-sm-12" >
+                            <div id="iframeDiv"></div>
+                        </div>
+                    </div>
+                    
+<!--               </div>
+               
+                     <div class="page-header">
+                                <div class="row">
+                                      <div class="col col-xs-12  col-sm-12">
+                                      		<p class="lead" id="subtitle">How does this compare by age?</p> 
+                                            <p>Donec imperdiet vehicula mauris, id varius eros pulvinar quis. Aenean suscipit sem nec nisi aliquet malesuada. Vestibulum nec lorem porta, varius mi sit amet, cursus ipsum. Vivamus magna nibh, cursus vitae ex non, hendrerit hendrerit sapien. Fusce pellentesque tincidunt dapibus. Aenean ac leo a sem tincidunt rhoncus. Integer luctus leo vitae mi suscipit faucibus. Duis euismod gravida orci, non efficitur ante fermentum vitae. Nullam sit amet facilisis ipsum, et hendrerit eros. Etiam ullamcorper ut nibh eget viverra. Curabitur a tortor massa. Sed sed nisi eu arcu dapibus fermentum a eu tellus. For information about the Foresight Future of an Ageing Populationproject, <a href="https://www.gov.uk/government/collections/future-of-ageing" target="_blank">please click here.</a></p>
+
+<p>Donec imperdiet vehicula mauris, id varius eros pulvinar quis. Aenean suscipit sem nec nisi aliquet malesuada. Vestibulum nec lorem porta, varius mi sit amet, cursus ipsum. Vivamus magna nibh, cursus vitae ex non, hendrerit hendrerit sapien. For the full data tables, <a href="Future_of_an_ageing_all_data.xlsx" target-"_blank" >please click here</a>.</p> 
+                                      </div>     
+                                </div>
+                          </div>
+                    
+                  
+                  <div id="navigation" class="row">
+                        <div class="col-sm-12 hidden-xs">
+                            <ul class="nav navbar nav-pills navbar-inverse nav-justified">
+                                <li class="active">
+                                    <a onClick="loadIframe(this.id);" href="#" id="all" data-toggle="pill" >All people</a>
+                                </li>
+                                <li>
+                                    <a onClick="loadIframe(this.id);" href="#" id="male" data-toggle="pill" >Males</a>
+                                </li>
+                                <li>
+                                    <a onClick="loadIframe(this.id);" href="#" id="female" data-toggle="pill" >Females</a>
+                                </li>
+                            </ul>
+                         </div>
+                      </div>
+                      
+                      <div class="col-xs-12 visible-xs">
+                          <div id="menu" role="group" class="btn-group btn-group col-xs-12">
+                            
+                              <button id="varsel" aria-expanded="true" data-toggle="dropdown" type="button" class="btn btn-primary dropdown-toggle btn-block">
+                                    all <span class="caret"></span>
+                              </button>      
+                              <ul class="dropdown-menu" role="menu">
+                                <li class="active">
+                                    <a onClick="loadIframe(this.id);" href="#" id="all">All</a>
+                                </li>
+                                <li>
+                                    <a onClick="loadIframe(this.id);" href="#" id="male">Males</a>
+                                </li>
+                                <li>
+                                    <a onClick="loadIframe(this.id);" href="#" id="female">Female</a>
+                                </li>
+                                </ul>
+                          </div>
+                      </div>
+                     
+                  <div>
+                    <div class="row" >
+                        <div class="col-sm-12" >
+                            <div id="iframeDiv"></div>
+                        </div>
+                    </div>
+                    
+               </div>
+-->                  
+                  </div><!--end of .bs-docs-section-->
+                    
+                </div> <!--end of container-->
+            </div> <!--end content -->
+
+            <div id="ieMsg" style="display:none">
+                <div id="suptext">
+                  <h1>Browser requirements</h1>
+                  <p><b>For a safer, faster, better experience online you should upgrade your browser. You would have been able to play with this lovely interactive graphic below. <a href="https://www.gov.uk/support/browsers" target="_blank">Find out more about browsers</a></b>
+                  </p>
+                </div>
+                  <img id="dist" src="fallback.png">
+            </div>
+    
+     
+	</div> <!--@end #main-wrapper --> 		   
+        
+</div> <!--end all divs-->
+
+
+    <script src="../lib/jquery.js"></script>
+    <script src="../lib/chosen.jquery.js"></script>
+    <script src="../lib/bootstrap.min.js"></script>
+ 	<script src="../lib/modernizr.custom.56904.js"></script>
+    <script src="../lib/d3.v3.min.js" charset="utf-8"></script>
+    <script src="../lib/topojson.js"></script>
+    <script src="../lib/queue.js" charset="utf-8"></script>
+    <script src="../lib/ss.js"></script>
+    <script src="../lib/pym.js"></script>
+
+
+<script type="text/javascript"> 
+
+if (Modernizr.inlinesvg){		
+		
+			$("#main-wrapper").fadeIn(1000);
+			$("#content").fadeIn(1000);
+			
+		}else{
+				$("#ieMsg").fadeIn(1000);
+		}	
+
+		d3.select("#twitter").on("click",tweet);
+		d3.select("#face").on("click",faceb);
+		d3.select("#embed").on("click",embed);
+		d3.select("#close").on("click",embedclose);
+		d3.select("#inputType").attr("value",'<iframe width=940 height=700 src="' + document.URL + '" scrolling=no frameborder=0/>');		 
+		 	
+		function faceb() {
+				var face = 'http://www.facebook.com/share.php?u=' + window.location.href;
+				window.open(face);
+		}
+		
+		function tweet() {
+				var myString="http://twitter.com/home?status="+escape("Explore personal well-being measures across the UK with this interactive map "+ window.location.href);
+				window.open(myString);
+		}
+		
+		function embed() {
+				d3.select("#embedrow").attr("class","row show");
+		}
+		
+		function embedclose() {
+				d3.select("#embedrow").attr("class","row hide");
+		}
+	
+		
+		
+//init function
+$(document).ready(function(){
+	loadIframe("all");
+	
+	$('#collapse').hide();
+					
+	$('.coll').on('click',function(){
+				$('#intro').toggle('slide');
+				$('#collapse').toggle(); 
+				$('#expand').toggle();        
+		});	
+		
+		
+	pymChild = new pym.Child();
+				if (pymChild) { pymChild.sendHeight(); }	
+});
+		
+//Function to destroy old information and create new
+function loadIframe(data){
+	
+	d3.select("#iframeDiv").select("iframe").remove();
+	
+	d3.selectAll("#menu").select(".dropdown-menu").selectAll("li").attr("class","")
+	
+	//Derive iframe path				
+	var filepth = data+ ".html";
+	//console.log(filepth)
+		d3.select("#chartTitle").selectAll('tspan').remove();
+
+
+//Create title
+	var title = d3.select("#chartTitle")
+		title.append("tspan").text(function(){
+								if(data=="worthwhile"){
+									return "To what extent do you feel the things you do in your life are ";
+								} else {
+									return "How ";
+								}
+						});
+		title.append("tspan").text(function(){
+								if(data == "all"){
+									return "all"; 
+								} else if (data == "male"){
+									return "male";
+								} else if (data == "female"){
+									return "female"
+								} 
+						})
+					
+
+
+	
+	if (data == "all"){
+		var ddText = "all";
+	} else if (data == "male"){
+		var ddText = "male";
+	} else if (data == "female"){
+		var ddText = "female";
+	} 
+	
+	d3.select(".dropdown-menu").select("#"+data).attr("class","active")
+	
+	d3.select("#varsel").html(ddText +" <span class='caret'></span>") 
+	// One call for each container div.
+    var pymParent = new pym.Parent('iframeDiv', data+'.html', {});			
+
+}
+		
+
+		</script>
+    
+    <script>
+
+				/* Google analytics */
+				  var _gaq = _gaq || [];
+				  _gaq.push(['_setAccount', 'UA-37894017-1']);
+				  _gaq.push(['_trackPageview']);
+				
+				
+				  (function() {
+					var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+					ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+					var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+				  })();
+		  
+		
+			
+
+    </script>
+  </body>
+</html>
